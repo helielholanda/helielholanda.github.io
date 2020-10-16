@@ -1,0 +1,111 @@
+<html>
+  <head>
+      <title>calculadora</title>
+  </head>
+  <body>
+      <div id='calculadora'>
+
+        <form name="calculadora">
+          
+          <input type="text" name="resultado" placeholder="Resultado"/>
+          <br>
+          <br>
+
+          <div id="number">
+            <input class="btn" type="button" value=" 1 " onclick="calculadora.resultado.value += '1'" />
+            <input class="btn" type="button" value=" 2 " onclick="calculadora.resultado.value += '2'" />
+            <input class="btn" type="button" value=" 3 " onclick="calculadora.resultado.value += '3'" />
+            <input class="btn operador" type="button" value=" + " onclick="calculadora.resultado.value += '+'" />
+            <br>
+            <input class="btn" type="button" value=" 4 " onclick="calculadora.resultado.value += '4'" />
+            <input class="btn" type="button" value=" 5 " onclick="calculadora.resultado.value += '5'" />
+            <input class="btn" type="button" value=" 6 " onclick="calculadora.resultado.value += '6'" />
+            <input class="btn operador" type="button" value=" - " onclick="calculadora.resultado.value += '-'" />
+            <br>
+            <input class="btn" type="button" value=" 7 " onclick="calculadora.resultado.value += '7'" />
+            <input class="btn" type="button" value=" 8 " onclick="calculadora.resultado.value += '8'" />
+            <input class="btn" type="button" value=" 9 " onclick="calculadora.resultado.value += '9'" />
+            <input class="btn operador" type="button" value=" * " onclick="calculadora.resultado.value += '*'" />
+            <br>
+            <input class="btn operador" type="button" value=" c " onclick="calculadora.resultado.value = ''" />
+            <input class="btn" type="button" value=" 0 " onclick="calculadora.resultado.value += '0'" />
+            <input class="btn" type="button" value=" . " onclick="calculadora.resultado.value += '.'" />
+            <input class="btn operador" type="button" value=" / " onclick="calculadora.resultado.value += '/'" />
+            <br>
+            <input class="btn-res" type="button" value=" = " onclick="calculadora.resultado.value = eval(calculadora.resultado.value)" />
+          </div>
+
+        </form>
+      </div>
+    </body>
+</html>
+
+<style>
+  #calculadora{
+    position: relative;
+    cursor: move;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 12px;
+    margin: 0px auto;
+    padding: 20px 20px 100px 20px;
+  }
+
+  /* botoões comuns */
+  .btn {
+    background:black;
+    background-color:#000000;
+    border:1px solid #ffffff;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:20px;
+    font-weight:bold;
+    padding:10px 20px;
+    text-decoration:none;
+    width: 95px;
+    margin-top: 5px;
+  }
+  .operador {
+    background-color:#ff7800;
+    color: white;
+    padding:10px 20px;
+  }
+  
+  .btn:hover {
+    background:linear-gradient(to bottom, #000000 5%, #000000 100%);
+    background-color:#000000;
+  }
+
+  .btn:active {
+    position:relative;
+    top:1px;
+  }
+
+  /* botões de resultado */
+  .btn-res {
+    background:linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+    background-color:#74ad5a;
+    border:1px solid #3b6e22;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:30px;
+    font-weight:bold;
+    padding:10px 76px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  input[type = text] {
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    font-size: 20px;
+    padding: 10px;
+    box-shadow: 4px 0px 12px black inset;
+  }
+</style>
