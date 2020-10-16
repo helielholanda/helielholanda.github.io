@@ -2,15 +2,17 @@
   <head>
       <title>calculadora</title>
   </head>
-  <body>
-      <div id='calculadora'>
+  <body style="background-image: url('https://cdn.hipwallpaper.com/i/79/44/BliZg9.jpg');  background-repeat: no-repeat;  background-size: cover;">
+      <div style="background-color:#E6E6FA" id='calculadora'>
 
-        <form name="calculadora">
-          
-          <input type="text" name="resultado" placeholder="Resultado"/>
+        <form name="calculadora" >
           <br>
           <br>
-
+          <input type="text" id="result" name="resultado" placeholder="Resultado"/>
+          <br>
+          <br>
+          <br>
+          <br>
           <div id="number">
             <input class="btn" type="button" value=" 1 " onclick="calculadora.resultado.value += '1'" />
             <input class="btn" type="button" value=" 2 " onclick="calculadora.resultado.value += '2'" />
@@ -49,6 +51,7 @@
     border-radius: 12px;
     margin: 0px auto;
     padding: 20px 20px 100px 20px;
+    margin-top: 200px
   }
 
   /* botoões comuns */
@@ -109,3 +112,14 @@
     box-shadow: 4px 0px 12px black inset;
   }
 </style>
+
+
+<script>
+  document.addEventListener('keydown', function(e) {
+    if e.which === 13 {
+      alert(calculadora.resultado.value);
+      document.getElementsById('result').value(eval(calculadora.resultado.value));
+    }
+  });
+</script>
+
